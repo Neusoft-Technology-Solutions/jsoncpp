@@ -71,10 +71,12 @@
 #    pragma warning(disable : 4786)
 #  endif // MSVC 6
 
+#if 0
 #  if _MSC_VER >= 1500 // MSVC 2008
     /// Indicates that the following function is deprecated.
 #    define JSONCPP_DEPRECATED(message) __declspec(deprecated(message))
 #  endif
+#endif
 
 #endif // defined(_MSC_VER)
 
@@ -119,6 +121,7 @@
 #define JSON_HAS_RVALUE_REFERENCES 0
 #endif
 
+#if 0
 #ifdef __clang__
 #  if __has_extension(attribute_deprecated_with_message)
 #    define JSONCPP_DEPRECATED(message)  __attribute__ ((deprecated(message)))
@@ -130,6 +133,7 @@
 #    define JSONCPP_DEPRECATED(message)  __attribute__((__deprecated__))
 #  endif  // GNUC version
 #endif // __clang__ || __GNUC__
+#endif
 
 #if !defined(JSONCPP_DEPRECATED)
 #define JSONCPP_DEPRECATED(message)
