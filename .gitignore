@@ -9,7 +9,7 @@
 /bin/
 /libs/
 /doc/doxyfile
-/dist/
+#/dist/
 #/version
 #/include/json/version.h
 
